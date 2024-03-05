@@ -6,12 +6,15 @@
    3. npm init;
    4. install express;
    5. install  
-   6. create server;
+   6. create server.
+- [X] Routes;
+   1. create new router;
+   2. export new router;
+   3. inject in routers index;
+   4. inject router index in app.
 
 ### What I have to do
 
-- [ ] Routes;
-   1. create routes;
 - [ ] Connect with database;
 - [ ] Controller:
    1. to receive requistions;
