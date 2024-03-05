@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const port = 3000;
-const router = require("./routers/index");
+const router = require("./routers/index"); // Inject routers in app
 
 router(app);
 
