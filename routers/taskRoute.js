@@ -1,22 +1,27 @@
 const { Router } = require("express");
 const router = Router();
+const taskController = require("../controller/taskController");
 
 router.get("/task", (req, res) => {
-  res.send("You tasks will be listed...");
+  const response = taskController.find();
+  res.send(response);
 });
 
 router.post("/task", (req, res) => {
-  res.send("Your task will be created...");
+  const response = taskController.add();
+  res.send(response);
 });
 
 router.put("/task/:id", (req, res) => {
   const { id } = req.params;
-  res.send(`Your task: ${id} will be updated...`);
+  const response = taskController.update(id);
+  res.send(response);
 });
 
 router.delete("/task/:id", (req, res) => {
   const { id } = req.params;
-  res.send(`Your task: ${id} will be deleted...`);
+  const response = taskController.delete(id);
+  res.send(response);
 });
 
 module.exports = router; // export router
