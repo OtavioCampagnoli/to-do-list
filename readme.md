@@ -19,12 +19,12 @@
   5. Add new Table to create;
   6. Inject Connection;
   7. Inject init table passed connection to create the tables.
+- [X] Controller:
+   1. to receive requistions;
+   2. send response of the requisitions;
 
 ### What I have to do
 
-- [ ] Controller:
-   1. to receive requistions;
-   2. send response of the requisitions;
 - [ ] Model:
    1. business rule;
    2. querys to database.
