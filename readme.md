@@ -23,7 +23,7 @@
   5. Add new Table to create;
   6. Inject Connection;
   7. Inject init table passed connection to create the tables.
-- [ ] Contraoller:
+- [ ] Controller:
    1. to receive requistions;
    2. send response of the requisitions;
 - [ ] Model:
