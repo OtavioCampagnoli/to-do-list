@@ -1,15 +1,16 @@
+const taskModel = require("../models/taskModel");
 class TaskController {
   find() {
-    return "Finding the tasks...";
+    return taskModel.list();
   }
-  add() {
-    return "Adding new task...";
+  add(newTask) {
+    return taskModel.add(newTask);
   }
-  update(id) {
-    return `Updating task: ${id}...`;
+  update(id, newTask) {
+    return taskModel.update(id, newTask);
   }
   delete(id) {
-    return `Deleting task: ${id}...`;
+    return taskModel.delete(id);
   }
 }
 
