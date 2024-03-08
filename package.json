@@ -4,14 +4,17 @@
   "description": "1. initial config;    1. install node; (npm)    2. create project;    3. create server; 2. routes;    1. create routes; 3. connectionn with data base;    1. mySql; 4. controller;    1. to receive requistions;    2. send response of the requisitions; 5. model;    1. business rule;    2. querys to database.",
   "main": "index.js",
   "scripts": {
+    "start": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^16.4.5",
     "express": "^4.18.3",
     "my": "^0.3.3",
-    "mysql": "^2.18.1"
+    "mysql": "^2.18.1",
+    "nodemon": "^3.1.0"
   }
 }
