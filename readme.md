@@ -22,9 +22,8 @@
 - [X] Controller:
    1. to receive requistions;
    2. send response of the requisitions;
-
-### What I have to do
-
-- [ ] Model:
+- [X] Model:
    1. business rule;
    2. querys to database.
+
+- [X] API CRUD methods (get, post, put, delete)
