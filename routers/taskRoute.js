@@ -14,7 +14,8 @@ router.get("/tasks", (req, res) => {
 });
 
 router.post("/task", (req, res) => {
-  const newTask = req.query;
+  const newTask = req.body;
+  console.log('olá', newTask);
   const responseNewTask = taskController.add(newTask);
   responseNewTask
     .then((result) => {
@@ -25,7 +26,7 @@ router.post("/task", (req, res) => {
     });
 });
 
-router.put("/task:id", (req, res) => {
+router.put("/task/:id", (req, res) => {
   const { id } = req.params;
   const newTask = req.body;
   const responseNewTask = taskController.update(id, newTask);

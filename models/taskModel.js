@@ -18,13 +18,12 @@ class TaskModel {
   }
 
   add(newTask) {
-    console.log(newTask);
     let title, content;
     title = newTask.title;
     content = newTask.content;
 
     const query = `INSERT INTO tasks (title, content) 
-                      VALUES (${title}, ${content}); `;
+                      VALUES ('${title}', '${content}'); `;
 
     return new Promise(function (resolve, reject) {
       connection.query(query, {}, (error, response) => {
@@ -46,19 +45,19 @@ class TaskModel {
     status = newTask.status;
     deadline = newTask.deadline;
 
-    const query = "UPDATE tasks SET";
+    let query = "UPDATE tasks SET ";
 
     if (title != undefined && title != null) {
-      query += `title = ${title}`;
+      query += `title = '${title}'`;
     }
     if (content != undefined && content != null) {
-      query += `,content = ${content}`;
+      query += `,content = '${content}'`;
     }
     if (status != undefined && status != null) {
-      query += `, status = ${status}`;
+      query += `, status = '${status}'`;
     }
     if (deadline != undefined && deadline != null) {
-      query += `, deadline = ${deadline}`;
+      query += `, deadline = '${deadline}'`;
     }
 
     query += ` Where id = ${id};`;
